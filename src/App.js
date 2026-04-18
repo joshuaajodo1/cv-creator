@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import { TEMPLATES } from './templates/Templates';
 
@@ -21,8 +21,6 @@ export default function App() {
   const [skillInput, setSkillInput] = useState('');
   const [langInput, setLangInput] = useState({ name:'', level:'' });
   const [certInput, setCertInput] = useState('');
-  const printRef = useRef();
-
   const progress = ((step) / (STEPS.length - 1)) * 100;
 
   /* ─── Helpers ─── */

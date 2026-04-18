@@ -2,7 +2,6 @@ import React from 'react';
 
 /* ─────────────── HELPERS ─────────────── */
 const safe = (v) => v || '';
-const stars = (n) => '★'.repeat(Math.min(n||3,5)) + '☆'.repeat(5 - Math.min(n||3,5));
 
 /* ══════════════════════════════════════════
    TEMPLATE 1: EXECUTIVE CLASSIC
@@ -422,7 +421,7 @@ export const Template5 = ({ data }) => {
           </T5Block>}
 
           {languages.length > 0 && <T5Block label="// languages">
-            {languages.map((l,i) => <div key={i} style={{ fontFamily:"'Space Mono', monospace", fontSize:'0.7rem', color:'#8b949e', marginBottom:'0.3rem' }}><span style={{ color:'#e6edf3' }}>{l.name}</span>{l.level && <span> // {l.level}</span>}</div>)}
+            {languages.map((l,i) => <div key={i} style={{ fontFamily:"'Space Mono', monospace", fontSize:'0.7rem', color:'#8b949e', marginBottom:'0.3rem' }}><span style={{ color:'#e6edf3' }}>{l.name}</span>{l.level && <span>{' // '}{l.level}</span>}</div>)}
           </T5Block>}
 
           {certifications.length > 0 && <T5Block label="// certs">
